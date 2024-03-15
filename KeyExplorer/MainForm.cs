@@ -12,9 +12,12 @@ namespace KeyExplorer
 {
     public partial class MainForm : Form
     {
+        private Canvas canvas = null;
         public MainForm()
         {
             InitializeComponent();
+            canvas = new Canvas(this.pictureBoxMain);
+            canvas.Draw();
         }
     }
 }
