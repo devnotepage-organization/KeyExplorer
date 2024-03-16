@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyExplorer.Domain", "KeyEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyExplorer.View", "KeyExplorer.View\KeyExplorer.View.csproj", "{5031BDE4-79BC-4F82-9EF7-6CFDD95ED25D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyExplorerTest.Tests", "KeyExplorerTest.Tests\KeyExplorerTest.Tests.csproj", "{A0EFC7A2-0B2C-4488-A2BB-9E26C429DA26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5031BDE4-79BC-4F82-9EF7-6CFDD95ED25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5031BDE4-79BC-4F82-9EF7-6CFDD95ED25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5031BDE4-79BC-4F82-9EF7-6CFDD95ED25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0EFC7A2-0B2C-4488-A2BB-9E26C429DA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0EFC7A2-0B2C-4488-A2BB-9E26C429DA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0EFC7A2-0B2C-4488-A2BB-9E26C429DA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0EFC7A2-0B2C-4488-A2BB-9E26C429DA26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
