@@ -16,8 +16,7 @@ namespace KeyExplorer
         public MainForm()
         {
             InitializeComponent();
-            canvas = new Canvas(this.pictureBoxMain);
-            canvas.Draw();
+            canvas = new Canvas(this);
         }
     }
 }
