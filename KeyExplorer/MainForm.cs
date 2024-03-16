@@ -12,11 +12,11 @@ namespace KeyExplorer
 {
     public partial class MainForm : Form
     {
-        private Canvas canvas = null;
+        private Paine paine = null;
         public MainForm()
         {
             InitializeComponent();
-            canvas = new Canvas(this);
+            paine = new Paine(this);
         }
     }
 }

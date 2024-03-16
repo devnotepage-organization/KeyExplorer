@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace KeyExplorer
 {
-    internal class Canvas
+    internal class Paine
     {
         private Form _parent = null;
         private PictureBox _pictureBox = null;
         private Bitmap _bitmap = null;
         private Graphics _graphics = null;
         private Font _font = new Font("MS UI Gothic", 12);
-        public Canvas(Form parent)
+        private Color _backGround = Color.Black;
+        private Brush _foreGround = Brushes.White;
+        public Paine(Form parent)
         {
             _pictureBox = new PictureBox();
             _pictureBox.Dock = DockStyle.Fill;
-            _pictureBox.BackColor = System.Drawing.Color.Black;
+            _pictureBox.BackColor = _backGround;
 
             _parent = parent;
             _parent.Controls.Add(_pictureBox);
@@ -34,16 +36,16 @@ namespace KeyExplorer
         public void Resize()
         {
             _pictureBox.Size = _parent.Size;
-            _bitmap = new Bitmap(_pictureBox.Width, _pictureBox.Height);
-            Debug.WriteLine(string.Format("w[{0}]h[{1}]", _bitmap.Width ,_bitmap.Height));
+            _bitmap = new Bitmap(Util.Max(_pictureBox.Width, 1), Util.Max(_pictureBox.Height, 1));
             _pictureBox.Image = _bitmap;
             _graphics = Graphics.FromImage(_bitmap);
             Draw();
+            Debug.WriteLine(string.Format("size{0},{1}", _bitmap.Width, _bitmap.Height));
         }
         public void Draw()
         {
-            _graphics.Clear(Color.Black);
-            _graphics.DrawString("test string.", _font, Brushes.White, 0, 0);
+            IEnumerable<string> drives = Util.GetDrives();
+            _graphics.DrawString(string.Join(Environment.NewLine, drives), _font, _foreGround, 0, 0);
         }
     }
 }
