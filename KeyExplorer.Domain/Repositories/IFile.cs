@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KeyExplorer.Infrastructure
+namespace KeyExplorer.Domain.Repositories
 {
-    public class Util
+    public interface IFile
     {
+        IEnumerable<string> GetDrives();
     }
 }

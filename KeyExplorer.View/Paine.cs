@@ -18,6 +18,7 @@ namespace KeyExplorer.View
         private Graphics _graphics = null;
         private KeyBinder _keyBinder = null;
         private Setting _setting = new Setting();
+        private Domain.Repositories.IFile _file = new Infrastructure.File();
         public Paine(Form parent)
         {
             _parent = parent;
@@ -45,7 +46,7 @@ namespace KeyExplorer.View
         }
         public void Draw()
         {
-            IEnumerable<string> drives = Domain.Util.GetDrives();
+            IEnumerable<string> drives = _file.GetDrives();
             _graphics.DrawString(string.Join(Environment.NewLine, drives), _setting.DefaultFont, _setting.ForeGround, 0, 0);
         }
     }
