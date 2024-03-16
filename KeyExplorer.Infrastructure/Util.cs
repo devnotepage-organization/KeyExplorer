@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KeyExplorer.Domain
+namespace KeyExplorer.Infrastructure
 {
-    public class Class1
+    public class Util
     {
     }
 }

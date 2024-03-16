@@ -12,9 +12,11 @@ namespace KeyExplorer.View
 {
     public partial class MainForm : Form
     {
+        private Paine paine = null;
         public MainForm()
         {
             InitializeComponent();
+            paine = new Paine(this);
         }
     }
 }

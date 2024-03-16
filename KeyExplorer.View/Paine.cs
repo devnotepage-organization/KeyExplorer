@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KeyExplorer
+namespace KeyExplorer.View
 {
     internal class Paine
     {
@@ -37,7 +37,7 @@ namespace KeyExplorer
         public void Resize()
         {
             _pictureBox.Size = _parent.Size;
-            _bitmap = new Bitmap(Util.Max(_pictureBox.Width, 1), Util.Max(_pictureBox.Height, 1));
+            _bitmap = new Bitmap(Domain.Util.Max(_pictureBox.Width, 1), Domain.Util.Max(_pictureBox.Height, 1));
             _pictureBox.Image = _bitmap;
             _graphics = Graphics.FromImage(_bitmap);
             Draw();
@@ -45,7 +45,7 @@ namespace KeyExplorer
         }
         public void Draw()
         {
-            IEnumerable<string> drives = Util.GetDrives();
+            IEnumerable<string> drives = Domain.Util.GetDrives();
             _graphics.DrawString(string.Join(Environment.NewLine, drives), _setting.DefaultFont, _setting.ForeGround, 0, 0);
         }
     }
