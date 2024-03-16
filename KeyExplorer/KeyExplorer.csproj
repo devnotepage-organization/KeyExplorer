@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KeyBinder.cs" />
+    <Compile Include="Setting.cs" />
     <Compile Include="Paine.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

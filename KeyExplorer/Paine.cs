@@ -16,16 +16,17 @@ namespace KeyExplorer
         private PictureBox _pictureBox = null;
         private Bitmap _bitmap = null;
         private Graphics _graphics = null;
-        private Font _font = new Font("MS UI Gothic", 12);
-        private Color _backGround = Color.Black;
-        private Brush _foreGround = Brushes.White;
+        private KeyBinder _keyBinder = null;
+        private Setting _setting = new Setting();
         public Paine(Form parent)
         {
+            _parent = parent;
+
+            _keyBinder = new KeyBinder(_parent);
+
             _pictureBox = new PictureBox();
             _pictureBox.Dock = DockStyle.Fill;
-            _pictureBox.BackColor = _backGround;
-
-            _parent = parent;
+            _pictureBox.BackColor = _setting.BackGround;
             _parent.Controls.Add(_pictureBox);
             _parent.Resize += (object sender, EventArgs e) =>
             {
@@ -45,7 +46,7 @@ namespace KeyExplorer
         public void Draw()
         {
             IEnumerable<string> drives = Util.GetDrives();
-            _graphics.DrawString(string.Join(Environment.NewLine, drives), _font, _foreGround, 0, 0);
+            _graphics.DrawString(string.Join(Environment.NewLine, drives), _setting.DefaultFont, _setting.ForeGround, 0, 0);
         }
     }
 }
