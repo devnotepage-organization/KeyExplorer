@@ -7,7 +7,7 @@ printf "\n"
 git status
 printf "\n"
 
-read -p "Commit."
+#read -p "Commit."
 
 git commit -a -m'Update'
 printf "\n"
