@@ -20,4 +20,4 @@ printf "\n"
 git push -v --progress "origin" main:main
 printf "\n"
 
-read -p "Complete."
+#read -p "Complete."
