@@ -28,10 +28,7 @@ namespace KeyExplorer.View
             _pictureBox.Dock = DockStyle.Fill;
             _pictureBox.BackColor = _setting.BackGround;
             _parent.Controls.Add(_pictureBox);
-            _parent.Resize += (object sender, EventArgs e) =>
-            {
-                Resize();
-            };
+            _parent.Resize += (object sender, EventArgs e) => { Resize(); };
             Resize();
         }
         public void Resize()
