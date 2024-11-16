@@ -7,7 +7,7 @@ printf "\n"
 git status
 printf "\n"
 
-read -p "Commit."
+#read -p "Commit."
 
 git commit -a -m'Update'
 printf "\n"
@@ -15,9 +15,16 @@ printf "\n"
 #read -p "Sync."
 
 git pull -v --progress "origin"
+<<<<<<< HEAD
 #printf "\n"
 
 git push -v --progress "origin" main:main
 #printf "\n"
+=======
+printf "\n"
 
-read -p "Complete."
+git push -v --progress "origin" main:main
+printf "\n"
+>>>>>>> 12bce315bbbe299a380e4d708fdbeb6c8f8b2fa0
+
+#read -p "Complete."
